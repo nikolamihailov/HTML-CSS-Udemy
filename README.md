@@ -1,1 +1,1 @@
-#HTML/CSS course - Jonas Schmedtmann
+#HTML/CSS Udemy course - Jonas Schmedtmann
