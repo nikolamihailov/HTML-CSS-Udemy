@@ -7,6 +7,7 @@ body {
   font-family: sans-serif;
   color: #444;
   border-top: 10px solid #1098ad;
+  position: relative;
 }
 
 .container {
@@ -18,7 +19,6 @@ body {
   background-color: #f7f7f7;
   padding: 20px 40px;
   margin-bottom: 60px;
-  height: 80px;
 }
 
 .post-header {
@@ -27,6 +27,7 @@ body {
 
 nav {
   font-size: 18px;
+  text-align: center;
 }
 
 article {
@@ -44,8 +45,22 @@ h1 {
 }
 
 h2 {
+  position: relative;
   font-size: 40px;
   margin-bottom: 30px;
+}
+h2::after {
+  content: "Top";
+  text-transform: uppercase;
+  background-color: #ffe70e;
+  color: black;
+  font-size: bold;
+  font-size: 18px;
+  padding: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
 }
 
 h3 {
@@ -146,7 +161,30 @@ a:active {
   font-style: italic;
 }
 
+nav a:link {
+  /*  background-color: orangered;
+  margin: 20px;
+  padding: 20px;
+  display: block; */
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
 .post-img {
   width: 100%;
   height: auto;
+}
+
+button {
+  cursor: pointer;
+  font-size: 22px;
+  padding: 20px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
