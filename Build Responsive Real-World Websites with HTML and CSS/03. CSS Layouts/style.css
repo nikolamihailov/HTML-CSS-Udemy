@@ -200,7 +200,6 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 }
 
@@ -270,6 +269,7 @@ nav p {
 } */
 
 /*  FLOATS  */
+/*
 .author-img {
   float: left;
   margin-bottom: 20px;
@@ -305,4 +305,38 @@ aside {
 }
 footer {
   clear: both;
+}
+/*
+
+/* FLEXBOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  gap: 75px;
+}
+aside {
+  flex: 0 0 300px;
+  align-self: flex-start;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
