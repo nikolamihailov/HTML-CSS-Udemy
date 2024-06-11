@@ -24,3 +24,26 @@ body {
   font-family: "Inter", sans-serif;
   color: #343a40;
 }
+
+.table {
+  width: 700px;
+  margin: 100px auto;
+  border-collapse: collapse;
+}
+thead th {
+  background-color: #087f5b;
+  color: #fff;
+  font-size: 18px;
+  width: 25%;
+}
+th,
+td {
+  padding: 16px 24px;
+}
+
+tbody tr {
+  background-color: #f1f3f5;
+}
+tbody tr:nth-child(even) {
+  background-color: #dee2e6;
+}
