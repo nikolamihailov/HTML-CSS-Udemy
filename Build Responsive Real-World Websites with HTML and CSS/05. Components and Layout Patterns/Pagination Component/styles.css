@@ -23,4 +23,69 @@ GREY COLOR: #343a40
 body {
   font-family: "Inter", sans-serif;
   color: #343a40;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.btn {
+  outline: none;
+  border: 2px solid #087f5b;
+  background-color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #087f5b;
+}
+
+.btn:hover {
+  background-color: #087f5b;
+}
+.btn:hover > .btn-icon {
+  stroke: #fff;
+}
+
+.pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.page:link,
+.page:visited {
+  font-size: 18px;
+  text-decoration: none;
+  color: #343a40;
+  background-color: #fff;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page:active,
+.page:hover {
+  color: #fff;
+  background-color: #087f5b;
+}
+
+.page-active:link {
+  color: #fff;
+  background-color: #087f5b;
 }
