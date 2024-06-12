@@ -75,33 +75,8 @@ body {
   color: #555;
 }
 
-.hero-section {
-  background-color: #f9f2e9;
-  padding: 9.6rem 0;
-}
-.hero {
-  max-width: 130rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 9.6rem;
-}
-
-.hero-heading {
-  font-size: 5.2rem;
-  margin-bottom: 3.2rem;
-  line-height: 1.05;
-  font-weight: 600;
-  color: #333;
-  letter-spacing: -1px;
-}
-
-.hero-description {
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
-}
+/* ************************* */
+/* General Components*/
 
 .btn:link,
 .btn:visited {
@@ -139,12 +114,64 @@ body {
   box-shadow: inset 0 0 0 4px #fff;
 }
 
-.hero-img {
-  width: 100%;
-}
-
 .margin-r-sm {
   margin-right: 1.6rem !important;
+}
+/* **************************** */
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f2e9;
+
+  /* We will do it with height because we will make it sticky*/
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.logo {
+  height: 2.4rem;
+}
+
+.main-nav {
+  font-size: 2rem;
+}
+
+/* **************************** */
+/* Hero Section*/
+
+.hero-section {
+  background-color: #f9f2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.hero-heading {
+  font-size: 5.2rem;
+  margin-bottom: 3.2rem;
+  line-height: 1.05;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: -1px;
+}
+
+.hero-description {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
 }
 
 .delivered-meals {
