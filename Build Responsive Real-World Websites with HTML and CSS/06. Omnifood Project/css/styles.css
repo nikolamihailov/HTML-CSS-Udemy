@@ -291,3 +291,12 @@ body {
 .step-img {
   width: 50%;
 }
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #888;
+}
+
+.step-description {
+}
