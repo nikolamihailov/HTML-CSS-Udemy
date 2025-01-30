@@ -100,6 +100,17 @@ body {
   }
 }
 
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -136,12 +147,39 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-.btn-white::after {
-  background-color: red;
+  transition: all 0.5s ease;
 }
 
 .btn:hover::after {
   scale: 1.5;
+}
+
+.btn-white:hover::after {
+  animation: fade-out-and-expand 0.5s ease-in-out;
+}
+
+@keyframes fade-out-and-expand {
+  0% {
+    scale: 1;
+    opcity: 1;
+    background-color: rgba(255, 255, 255);
+  }
+  33% {
+    scale: 1.25;
+    opcity: 1;
+    background-color: rgba(255, 255, 255, 0.66);
+  }
+  66% {
+    scale: 1.5;
+    opcity: 1;
+    background-color: rgba(255, 255, 255, 0.33);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.btn-animated {
+  animation: slide-from-bottom 0.7s ease 0.75s;
+  animation-fill-mode: backwards;
 }
