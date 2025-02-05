@@ -1,0 +1,191 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-white: #fff;
+$color-grey-dark: #777;
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo-img {
+  height: 3.5rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
+  animation: slide-from-left 0.5s ease-in-out;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  letter-spacing: 1.4rem;
+  font-weight: 700;
+  animation: slide-from-right 0.7s ease-in-out;
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translate(-30%);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(1rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-right {
+  0% {
+    transform: translate(30%);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(-1rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  border-radius: 100px;
+  display: inline-block;
+  transition: all 0.2s linear;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: $color-white;
+  color: $color-grey-dark;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.btn:hover::after {
+  scale: 1.5;
+}
+
+.btn--white:hover::after {
+  animation: fade-out-and-expand 0.5s ease-in-out;
+}
+
+@keyframes fade-out-and-expand {
+  0% {
+    scale: 1;
+    opcity: 1;
+    background-color: $color-white;
+  }
+  33% {
+    scale: 1.25;
+    opcity: 1;
+    background-color: rgba($color-white, 0.66);
+  }
+  66% {
+    scale: 1.5;
+    opcity: 1;
+    background-color: rgba($color-white, 0.33);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.btn--animated {
+  animation: slide-from-bottom 0.7s ease 0.75s;
+  animation-fill-mode: backwards;
+}
