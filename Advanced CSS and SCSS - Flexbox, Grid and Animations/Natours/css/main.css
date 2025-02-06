@@ -27,17 +27,14 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-
 .header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
 .header__logo-img {
   height: 3.5rem;
 }
-
 .header__text-box {
   position: absolute;
   top: 40%;
@@ -51,14 +48,12 @@ body {
   text-transform: uppercase;
   margin-bottom: 6rem;
 }
-
 .heading-primary--main {
   display: block;
   font-size: 6rem;
   letter-spacing: 3.5rem;
   animation: slide-from-left 0.5s ease-in-out;
 }
-
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -105,8 +100,7 @@ body {
     opacity: 1;
   }
 }
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1.5rem 4rem;
@@ -116,22 +110,14 @@ body {
   position: relative;
   font-size: 1.6rem;
 }
-
 .btn:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-
 .btn:active {
   transform: translateY(0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-
 .btn::after {
   content: "";
   display: inline-block;
@@ -144,13 +130,19 @@ body {
   z-index: -1;
   transition: all 0.5s ease;
 }
-
 .btn:hover::after {
   scale: 1.5;
 }
-
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
 .btn--white:hover::after {
   animation: fade-out-and-expand 0.5s ease-in-out;
+}
+.btn--animated {
+  animation: slide-from-bottom 0.7s ease 0.75s;
+  animation-fill-mode: backwards;
 }
 
 @keyframes fade-out-and-expand {
@@ -172,10 +164,6 @@ body {
   100% {
     opacity: 0;
   }
-}
-.btn--animated {
-  animation: slide-from-bottom 0.7s ease 0.75s;
-  animation-fill-mode: backwards;
 }
 
 /*# sourceMappingURL=main.css.map */
