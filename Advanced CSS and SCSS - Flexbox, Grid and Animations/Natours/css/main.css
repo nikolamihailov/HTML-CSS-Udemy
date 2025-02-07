@@ -168,4 +168,43 @@ body {
   text-align: center;
 }
 
+.row {
+  max-width: 114rem;
+  background: #eee;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.row [class^=col-] {
+  background: red;
+  float: left;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-2-of-3 {
+  width: calc(100% - 6rem - (100% - 2 * 6rem) / 3);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+.row .col-2-of-4 {
+  width: calc(100% - 2 * 6rem - 2 * (100% - 3 * 6rem) / 4);
+}
+.row .col-3-of-4 {
+  width: calc(100% - 6rem - (100% - 3 * 6rem) / 4);
+}
+
 /*# sourceMappingURL=main.css.map */
