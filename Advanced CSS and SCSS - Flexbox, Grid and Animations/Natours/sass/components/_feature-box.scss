@@ -12,9 +12,8 @@
   &__icon {
     height: 6rem;
     margin-bottom: 0.6rem;
-  }
-
-  &__text {
+    fill: $color-primary-light;
+    color: $color-primary-dark;
   }
 
   &:hover {

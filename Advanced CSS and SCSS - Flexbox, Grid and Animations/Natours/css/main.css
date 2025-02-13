@@ -256,9 +256,49 @@ body {
 .feature-box__icon {
   height: 6rem;
   margin-bottom: 0.6rem;
+  fill: #7ed56f;
+  color: #28b485;
 }
 .feature-box:hover {
   transform: scale(1.05) translateY(-20px);
+}
+
+.card {
+  height: 50rem;
+  position: relative;
+  perspective: 150rem;
+}
+.card__side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50rem;
+  width: 100%;
+  transition: transform 1s ease;
+  backface-visibility: hidden;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card__side--front {
+  background-color: #fff;
+}
+.card__side--back {
+  transform: rotateY(-180deg);
+}
+.card__side--back-1 {
+  background: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card__side--back-2 {
+  background: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+.card__side--back-3 {
+  background: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
 }
 
 .header {
@@ -338,6 +378,13 @@ body {
 }
 .section-features > * {
   transform: skewY(7deg);
+}
+
+.section-tours {
+  margin-top: -10rem;
+  padding: 25rem 0 50rem 0;
+  height: 95vh;
+  background-color: #f7f7f7;
 }
 
 /*# sourceMappingURL=main.css.map */
