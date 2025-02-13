@@ -36,26 +36,6 @@
     opacity: 1;
   }
 }
-@keyframes fade-out-and-expand {
-  0% {
-    scale: 1;
-    opcity: 1;
-    background-color: #fff;
-  }
-  33% {
-    scale: 1.25;
-    opcity: 1;
-    background-color: rgba(255, 255, 255, 0.66);
-  }
-  66% {
-    scale: 1.5;
-    opcity: 1;
-    background-color: rgba(255, 255, 255, 0.33);
-  }
-  100% {
-    opacity: 0;
-  }
-}
 *,
 *::after,
 *::before {
@@ -143,6 +123,18 @@ body {
   margin-bottom: 2rem;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem;
+}
+
+.u-margin-top-small {
+  margin-top: 2rem;
+}
+
 .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
@@ -181,7 +173,54 @@ body {
   color: #777;
 }
 .btn--white:hover::after {
-  animation: fade-out-and-expand 0.5s ease-in-out;
+  animation: fade-out-and-expand-white 0.5s ease-in-out;
+}
+@keyframes fade-out-and-expand-white {
+  0% {
+    scale: 1;
+    opacity: 1;
+    background-color: #fff;
+  }
+  33% {
+    scale: 1.25;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.66);
+  }
+  66% {
+    scale: 1.5;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.33);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+}
+.btn--green:hover::after {
+  animation: fade-out-and-expand-green 0.5s ease-in-out;
+}
+@keyframes fade-out-and-expand-green {
+  0% {
+    scale: 1;
+    opacity: 1;
+    background-color: #55c57a;
+  }
+  33% {
+    scale: 1.25;
+    opacity: 1;
+    background-color: rgba(85, 197, 122, 0.66);
+  }
+  66% {
+    scale: 1.5;
+    opacity: 1;
+    background-color: rgba(85, 197, 122, 0.33);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .btn--animated {
   animation: slide-from-bottom 0.7s ease 0.75s;
@@ -357,6 +396,27 @@ body {
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
 }
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+.card__price-box {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.card__price-box-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.card__price-box-value {
+  font-size: 6rem;
+  font-weight: 100;
+}
 
 .header {
   position: relative;
@@ -439,8 +499,7 @@ body {
 
 .section-tours {
   margin-top: -10rem;
-  padding: 25rem 0 50rem 0;
-  height: 95vh;
+  padding: 25rem 0 15rem 0;
   background-color: #f7f7f7;
 }
 

@@ -5,3 +5,26 @@
     clear: both;
   }
 }
+
+@mixin fade-out-and-expand($name, $color) {
+  @keyframes fade-out-and-expand-#{$name} {
+    0% {
+      scale: 1;
+      opacity: 1;
+      background-color: $color;
+    }
+    33% {
+      scale: 1.25;
+      opacity: 1;
+      background-color: rgba($color, 0.66);
+    }
+    66% {
+      scale: 1.5;
+      opacity: 1;
+      background-color: rgba($color, 0.33);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

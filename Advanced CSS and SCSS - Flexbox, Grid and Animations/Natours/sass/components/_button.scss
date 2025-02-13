@@ -43,7 +43,18 @@
     color: $color-grey-dark;
 
     &:hover::after {
-      animation: fade-out-and-expand 0.5s ease-in-out;
+      @include fade-out-and-expand("white", $color-white);
+      animation: fade-out-and-expand-white 0.5s ease-in-out;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover::after {
+      @include fade-out-and-expand("green", $color-primary);
+      animation: fade-out-and-expand-green 0.5s ease-in-out;
     }
   }
 

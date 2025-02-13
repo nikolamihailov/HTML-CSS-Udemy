@@ -38,24 +38,3 @@
     opacity: 1;
   }
 }
-
-@keyframes fade-out-and-expand {
-  0% {
-    scale: 1;
-    opcity: 1;
-    background-color: $color-white;
-  }
-  33% {
-    scale: 1.25;
-    opcity: 1;
-    background-color: rgba($color-white, 0.66);
-  }
-  66% {
-    scale: 1.5;
-    opcity: 1;
-    background-color: rgba($color-white, 0.33);
-  }
-  100% {
-    opacity: 0;
-  }
-}
