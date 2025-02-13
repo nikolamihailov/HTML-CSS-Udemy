@@ -25,8 +25,24 @@
   &__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
-    backface-visibility: hidden;
     transition: all 0.5s;
+    backface-visibility: hidden;
+    transform: translateX(-4rem) scale(1.2);
+    backface-visibility: hidden;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    backface-visibility: hidden;
   }
 
   &__text {
@@ -35,5 +51,15 @@
 
   &:not(:last-child) {
     margin-bottom: $vertical-guter;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    filter: blur(5px) brightness(70%);
+    transform: translateX(-4rem) scale(0.95);
   }
 }
