@@ -7,19 +7,43 @@
 
   &__input {
     font-family: inherit;
+    color: inherit;
     font-size: 1.5rem;
     padding: 1.5rem 2rem;
     border-radius: 2px;
     background-color: rgba(variables.$color-white, 0.5);
     border: none;
     border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
 
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.1);
       border-bottom: 3px solid variables.$color-primary;
     }
+
+    &::placeholder {
+      color: variables.$color-grey-dark-2;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid variables.$color-secondary-dark;
+    }
   }
+
   &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
   }
 }
