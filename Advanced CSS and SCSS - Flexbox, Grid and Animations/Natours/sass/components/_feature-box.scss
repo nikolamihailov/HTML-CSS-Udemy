@@ -1,19 +1,21 @@
+@use "../abstract/variables" as variables;
+
 .feature-box {
-  background-color: rgba($color-white, 0.8);
+  background-color: rgba(variables.$color-white, 0.8);
   width: 25rem;
   height: 30rem;
   padding: 2.5rem;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 0.3rem;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.15);
   transition: transform 0.3s;
 
   &__icon {
     height: 6rem;
     margin-bottom: 0.6rem;
-    fill: $color-primary-light;
-    color: $color-primary-dark;
+    fill: variables.$color-primary-light;
+    color: variables.$color-primary-dark;
   }
 
   &:hover {

@@ -1,13 +1,15 @@
+@use "../abstract/variables" as variables;
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: $color-grey-dark;
+  color: variables.$color-grey-dark;
   padding: 3rem;
 }
 
 .heading-primary {
-  color: $color-white;
+  color: variables.$color-white;
   text-transform: uppercase;
   margin-bottom: 6rem;
 
@@ -33,7 +35,7 @@ body {
   letter-spacing: 0.2rem;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  background-image: linear-gradient(to right, variables.$color-primary-light, variables.$color-primary-dark);
   background-clip: text;
   color: transparent;
   transition: all 0.3s;
@@ -44,7 +46,7 @@ body {
 }
 
 .heading-tertiary {
-  font-size: $default-font-size;
+  font-size: variables.$default-font-size;
   font-weight: 700;
   text-transform: uppercase;
 }

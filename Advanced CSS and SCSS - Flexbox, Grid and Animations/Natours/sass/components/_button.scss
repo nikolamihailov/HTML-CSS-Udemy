@@ -1,3 +1,9 @@
+@use "../abstract/variables" as variables;
+@use "../abstract/mixins" as mixins;
+
+@include mixins.fade-out-and-expand("green", variables.$color-primary);
+@include mixins.fade-out-and-expand("white", variables.$color-white);
+
 .btn {
   &:link,
   &:visited {
@@ -8,17 +14,17 @@
     display: inline-block;
     transition: all 0.2s linear;
     position: relative;
-    font-size: $default-font-size;
+    font-size: variables.$default-font-size;
   }
 
   &:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    box-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.2);
   }
 
   &:active {
     transform: translateY(0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(variables.$color-black, 0.2);
   }
 
   &::after {
@@ -39,21 +45,19 @@
   }
 
   &--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
+    background-color: variables.$color-white;
+    color: variables.$color-grey-dark;
 
     &:hover::after {
-      @include fade-out-and-expand("white", $color-white);
       animation: fade-out-and-expand-white 0.5s ease-in-out;
     }
   }
 
   &--green {
-    background-color: $color-primary;
-    color: $color-white;
+    background-color: variables.$color-primary;
+    color: variables.$color-white;
 
     &:hover::after {
-      @include fade-out-and-expand("green", $color-primary);
       animation: fade-out-and-expand-green 0.5s ease-in-out;
     }
   }
@@ -67,24 +71,24 @@
 .btn-text {
   &:link,
   &:visited {
-    font-size: $default-font-size;
-    color: $color-primary;
+    font-size: variables.$default-font-size;
+    color: variables.$color-primary;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solid $color-primary;
+    border-bottom: 1px solid variables.$color-primary;
     padding: 3px;
     transition: all 0.2s;
   }
 
   &:hover {
-    background-color: $color-primary;
-    color: $color-white;
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    background-color: variables.$color-primary;
+    color: variables.$color-white;
+    box-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.15);
     transform: translateY(-2px);
   }
 
   &:active {
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(variables.$color-black, 0.15);
     transform: translateY(0);
   }
 }

@@ -1,20 +1,9 @@
-@import "abstract/functions";
-@import "abstract/mixins";
-@import "abstract/variables";
+@use "abstract";
 
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+@use "base";
 
-@import "components/button";
-@import "components/composition";
-@import "components/feature-box";
-@import "components/card";
-@import "components/story";
-@import "components/bg-video";
+@use "components";
 
-@import "layout/header";
-@import "layout/grid";
+@use "layout";
 
-@import "pages/home";
+@use "pages/home";

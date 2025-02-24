@@ -1,9 +1,11 @@
+@use "../abstract/variables" as variables;
+
 .composition {
   position: relative;
 
   &__photo {
     width: 55%;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.4);
     position: absolute;
     transition: all 0.2s ease;
     z-index: 10;
@@ -27,9 +29,9 @@
     &:hover {
       scale: 1.1;
       transform: translateY(-0.5rem);
-      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      box-shadow: 0 2.5rem 4rem rgba(variables.$color-black, 0.5);
       z-index: 999;
-      outline: 1rem solid $color-primary;
+      outline: 1rem solid variables.$color-primary;
     }
   }
 
