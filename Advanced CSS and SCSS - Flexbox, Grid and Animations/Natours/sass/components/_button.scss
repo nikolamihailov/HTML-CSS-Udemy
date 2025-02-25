@@ -5,6 +5,7 @@
 @include mixins.fade-out-and-expand("white", variables.$color-white);
 
 .btn {
+  &,
   &:link,
   &:visited {
     text-decoration: none;
@@ -15,6 +16,9 @@
     transition: all 0.2s linear;
     position: relative;
     font-size: variables.$default-font-size;
+
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -22,7 +26,9 @@
     box-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.2);
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(variables.$color-black, 0.2);
   }
